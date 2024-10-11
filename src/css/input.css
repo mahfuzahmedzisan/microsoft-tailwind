@@ -3,11 +3,41 @@
 @tailwind utilities;
 
 @layer components {
-   .container{
-      @apply max-w-screen-4xl ;
+   .container {
+      @apply max-w-screen-4xl;
+   }
+   a{
+
    }
 }
 
 .header-icon {
-   @apply text-xl;
+   @apply text-lg text-black dark:text-white;
+}
+
+.nav-link a {
+   @apply block text-black dark:text-white text-base py-3 px-7 border border-gray-100 ;
+}
+.nav-link a:hover {
+   @apply border-dotted border border-stone-950 dark:border-white;
+}
+.nav-link a:focus{
+   @apply block border-dotted border  dark:border-white; 
+}
+.drop-down {
+   @apply relative;
+}
+
+.drop-down::after{
+   @apply content-['\f107'] font-['fontawesome'] absolute right-7 top-1/2 -translate-y-1/2 text-base duration-300;
+}
+
+.drop-down-menu {
+   @apply text-base pt-3;
+}
+.drop-nav-link {
+   @apply text-black dark:text-white text-base px-7;
+}
+.drop-nav-link a{
+   @apply border-b border-x-transparent border-t-transparent;
 }

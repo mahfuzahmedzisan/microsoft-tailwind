@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["*", "./src/**/*.{js,jsx,ts,tsx,html}"],
+  darkMode: 'selector',
   theme: {
     screens: {
       'xs': "480px",
@@ -17,10 +18,6 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '2rem',
-        xl: '2rem',
-        '2xl': '3rem',
       },
     },
     extend: {

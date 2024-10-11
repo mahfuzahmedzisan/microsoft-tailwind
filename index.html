@@ -1,47 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-   <title>Microsoft – AI, Cloud, Productivity, Computing, Gaming &amp; Apps</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+   <title>
+      Microsoft – AI, Cloud, Productivity, Computing, Gaming &amp; Apps
+   </title>
 
    <!-- FontAwesome CDN  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
-    <!-- Remix Icon CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"/>
+   <!-- Remix Icon CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
 
-   <link rel="stylesheet" href="src/css/style.css">
+   <!-- Custom css  -->
+   <link rel="stylesheet" href="src/css/input.css" />
+   <link rel="stylesheet" href="src/css/style.css" />
 </head>
+
 <body class="font-body">
-   
-   <header>
+   <header class="bg-white dark:bg-stone-950 relative">
       <div class="container">
-         <div class="flex items-center justify-between">
-            <div>
-               <button id="opem-menu-btn">
-                  <span class="block w-7 h-0.5 bg-black mb-[.4rem]"></span>
-                  <span class="block w-7 h-0.5 bg-black"></span>
-                  <span class="block w-7 h-0.5 bg-black mt-[.4rem]"></span>
+         <div class="flex items-center justify-between py-2">
+            <div class="space-x-4">
+               <button id="open-menu-btn" class="p-4">
+                  <span class="block w-5 h-[1px] bg-black dark:bg-white mb-1"></span>
+                  <span class="block w-5 h-[1px] bg-black dark:bg-white"></span>
+                  <span class="block w-5 h-[1px] bg-black dark:bg-white mt-1"></span>
                </button>
-               <button id="close-menu-btn">
+               <button id="close-menu-btn" class="hidden py-2 pr-5">
                   <i class="header-icon ri-close-large-line"></i>
                </button>
-               <i class="header-icon ri-search-line"></i>
+               <a href="#"><i class="header-icon ri-search-line"></i></a>
             </div>
             <div class="w-28">
                <a href="#">
-                  <img class="w-full" src="assets/images/logo.png" alt="">
+                  <img class="w-full" src="assets/images/logo.png" alt="" />
                </a>
             </div>
-            <div>
-               <i class="header-icon ri-shopping-cart-2-line"></i>
-               <i class="header-icon ri-user-add-line"></i>
+            <ul id="menu" class="hidden absolute left-0 top-full w-full min-h-fit bg-white dark:bg-stone-950 ">
+               <li class="nav-link"><a href="#">Microsoft 365</a></li>
+               <li class="nav-link"><a href="#">Teams</a></li>
+               <li class="nav-link"><a href="#">Copilot</a></li>
+               <li class="nav-link"><a href="#">Windows</a></li>
+               <li class="nav-link"><a href="#">Surface</a></li>
+               <li class="nav-link"><a href="#">Xbox</a></li>
+               <li class="nav-link"><a href="#">Deals</a></li>
+               <li class="nav-link"><a href="#">Small Business</a></li>
+               <li class="nav-link"><a href="#">Support</a></li>
+               <li class="nav-link">
+                  <a class="drop-down" href="#">Software</a>
+                  <ul class="drop-down-menu hidden">
+                     <li class="drop-nav-link"><a href="#">Windows Apps</a></li>
+                     <li class="drop-nav-link"><a href="#">AI</a></li>
+                     <li class="drop-nav-link"><a href="#">Outlook</a></li>
+                     <li class="drop-nav-link"><a href="#">OneDrive</a></li>
+                     <li class="drop-nav-link"><a href="#">Microsoft Teams</a></li>
+                     <li class="drop-nav-link"><a href="#">OneNote</a></li>
+                     <li class="drop-nav-link"><a href="#">Microsoft Edge</a></li>
+                     <li class="drop-nav-link"><a href="#">Skype</a></li>
+                  </ul>
+               </li>
+               <li class="nav-link">
+                  <a class="drop-down" href="#">PCs & Devices</a>
+                  <ul class="drop-down-menu hidden">
+                     <li class="drop-nav-link"><a href="#">Computers</a></li>
+                     <li class="drop-nav-link"><a href="#">Shop Xbox</a></li>
+                     <li class="drop-nav-link"><a href="#">Accessories</a></li>
+                     <li class="drop-nav-link"><a href="#">VR & mixed reality</a></li>
+                     <li class="drop-nav-link"><a href="#">Certified Refurnished</a></li>
+                     <li class="drop-nav-link"><a href="#">Trade-in for cash</a></li>
+                  </ul>
+               </li>
+               <li class="nav-link">
+                  <a class="drop-down" href="#">Entertainment</a>
+                  <ul class="drop-down-menu hidden">
+                     <li class="drop-nav-link"><a href="#">Xbox Game Pass Ultimate</a></li>
+                     <li class="drop-nav-link"><a href="#">PC Game Pass</a></li>
+                     <li class="drop-nav-link"><a href="#">Xbox Games</a></li>
+                     <li class="drop-nav-link"><a href="#">PC and Windows games</a></li>
+                     <li class="drop-nav-link"><a href="#">Movies & TV</a></li>
+                  </ul>
+               </li>
+               <li class="nav-link">
+                  <a class="drop-down" href="#">Business</a>
+                  <ul class="drop-down-menu hidden">
+                     <li class="drop-nav-link"><a href="#">Microsoft Cloud</a></li>
+                     <li class="drop-nav-link"><a href="#">Microsoft Security</a></li>
+                     <li class="drop-nav-link"><a href="#">Dynamics 365</a></li>
+                     <li class="drop-nav-link"><a href="#">Microsoft 365 for business</a></li>
+                     <li class="drop-nav-link"><a href="#">Microsoft Power Platform</a></li>
+                     <li class="drop-nav-link"><a href="#">Windows 365</a></li>
+                     <li class="drop-nav-link"><a href="#">Microsoft Industry</a></li>
+                     <li class="drop-nav-link"><a href="#">Small Business</a></li>
+                  </ul>
+               </li>
+               <li class="nav-link">
+                  <a class="drop-down" href="#">Developer & IT</a>
+                  <ul class="drop-down-menu hidden">
+                     <li class="drop-nav-link"><a href="#">Azure</a></li>
+                     <li class="drop-nav-link"><a href="#">Developer Center</a></li>
+                     <li class="drop-nav-link"><a href="#">Documentation</a></li>
+                     <li class="drop-nav-link"><a href="#">Microsoft Learn</a></li>
+                     <li class="drop-nav-link"><a href="#">Microsoft Tech Community</a></li>
+                     <li class="drop-nav-link"><a href="#">Azure Marketplace</a></li>
+                     <li class="drop-nav-link"><a href="#">AppSource</a></li>
+                     <li class="drop-nav-link"><a href="#">Visual Studio</a></li>
+                  </ul>
+               </li>
+               <li class="nav-link">
+                  <a class="drop-down" href="#">Other</a>
+                  <ul class="drop-down-menu hidden">
+                     <li class="drop-nav-link"><a href="#">Microsoft Rewards</a></li>
+                     <li class="drop-nav-link"><a href="#">Free downloads & security</a></li>
+                     <li class="drop-nav-link"><a href="#">Education</a></li>
+                     <li class="drop-nav-link"><a href="#">Gift cards</a></li>
+                     <li class="drop-nav-link"><a href="#">Licensing</a></li>
+                     <li class="drop-nav-link"><a href="#">Unlocked stories</a></li>
+                  </ul>
+               </li>
+               <li class="nav-link border-b border-b-stone-950"><a href="#">View Sitemap</a></li>
+            </ul>
+            <div class="space-x-5">
+               <a class="header-icon inline-block" href="#"><i class="ri-shopping-cart-2-line"></i></a>
+               <a class="text-base inline-block px-2 py-1 border border-gray-400 rounded-full" href="#"><i
+                     class="text-gray-500 dark:text-gray-400 ri-user-add-line"></i></a>
             </div>
          </div>
       </div>
    </header>
 
+
+   
+   <script src="src/js/main.js"></script>
 </body>
+
 </html>
