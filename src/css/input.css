@@ -16,10 +16,10 @@
 }
 
 .nav-link a {
-   @apply block text-black dark:text-white text-base py-3 px-7 border border-gray-100 lg:border-0 lg:p-2;
+   @apply block text-black dark:text-white text-base py-3 px-7 border border-gray-100 2xl:border-0 2xl:p-2;
 }
 .nav-link a:hover {
-   @apply border-dotted border border-stone-950 dark:border-white lg:border-0;
+   @apply border-dotted border border-stone-950 dark:border-white 2xl:border-0;
 }
 .nav-link a:focus{
    @apply block border-dotted border  dark:border-white; 
