@@ -43,6 +43,6 @@ dropDown.forEach((item) => {
 dropDown3.forEach((item) => {
    item.addEventListener("click", () => {
       item.classList.toggle("after:rotate-180")
-      item.nextElementSibling.classList.toggle("lg:hidden")
+      item.nextElementSibling.classList.toggle("hidden")
    })
 })
