@@ -16,10 +16,10 @@
 }
 
 .nav-link a {
-   @apply block text-black dark:text-white text-base py-3 px-7 border border-gray-100 ;
+   @apply block text-black dark:text-white text-base py-3 px-7 border border-gray-100 lg:border-0 lg:p-2;
 }
 .nav-link a:hover {
-   @apply border-dotted border border-stone-950 dark:border-white;
+   @apply border-dotted border border-stone-950 dark:border-white lg:border-0;
 }
 .nav-link a:focus{
    @apply block border-dotted border  dark:border-white; 
@@ -40,4 +40,17 @@
 }
 .drop-nav-link a{
    @apply border-b border-x-transparent border-t-transparent;
+}
+#menu-3 a{
+   @apply dark:text-white text-black font-medium;
+}
+.drop-nav-link-3 a{
+   @apply text-sm pt-3 font-light inline-block border-b border-transparent;
+}
+.drop-nav-link-3 a:hover{
+   @apply border-b border-b-black dark:border-b-white;
+}
+
+.drop-down-3::after{
+   @apply content-['\f107'] font-['fontawesome'] absolute right-0 top-1/2 -translate-y-1/2 text-base duration-300;
 }
